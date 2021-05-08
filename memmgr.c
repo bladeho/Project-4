@@ -140,8 +140,11 @@ int main(int argc, const char* argv[]) {
   
   fclose(fcorr);
   fclose(fadd);
-  //printf("Num of addresses: %d\n", addresscount);
-  //printf("Num of page faults: %d\n", pageFault);
+  printf("Num of addresses: %d\n", addresscount);
+  printf("Num of page faults: %d\n", pageFault);
+  printf("page fault rate: %.2f%% \n", (float)pageFault / addresscount * 100);
+  printf("TLB hits: %d\n", tlbcount);
+  printf("TLB hit rate %.2f%%\n", (float)tlbcount / addresscount * 100);
   //printf("ONLY READ FIRST 20 entries -- TODO: change to read all entries\n\n");
   
   printf("ALL logical ---> physical assertions PASSED!\n");
